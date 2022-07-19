@@ -14,6 +14,7 @@
 		A0A219202886466B0096AE71 /* swiftui_mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2191F2886466B0096AE71 /* swiftui_mvvmTests.swift */; };
 		A0A2192A2886466B0096AE71 /* swiftui_mvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A219292886466B0096AE71 /* swiftui_mvvmUITests.swift */; };
 		A0A2192C2886466B0096AE71 /* swiftui_mvvmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2192B2886466B0096AE71 /* swiftui_mvvmUITestsLaunchTests.swift */; };
+		A0A2193A2886572A0096AE71 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A219392886572A0096AE71 /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A0A219252886466B0096AE71 /* swiftui-mvvmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-mvvmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A219292886466B0096AE71 /* swiftui_mvvmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITests.swift; sourceTree = "<group>"; };
 		A0A2192B2886466B0096AE71 /* swiftui_mvvmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A0A219392886572A0096AE71 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				A0A21910288646690096AE71 /* Minimal.swift */,
+				A0A219392886572A0096AE71 /* Login.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A2193A2886572A0096AE71 /* Login.swift in Sources */,
 				A0A21911288646690096AE71 /* Minimal.swift in Sources */,
 				A0A2190F288646690096AE71 /* swiftui_mvvmApp.swift in Sources */,
 			);
