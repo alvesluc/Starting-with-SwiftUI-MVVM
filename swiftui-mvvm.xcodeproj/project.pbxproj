@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A0A2190F288646690096AE71 /* swiftui_mvvmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */; };
-		A0A21911288646690096AE71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A21910288646690096AE71 /* ContentView.swift */; };
+		A0A21911288646690096AE71 /* Minimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A21910288646690096AE71 /* Minimal.swift */; };
 		A0A219132886466B0096AE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A219122886466B0096AE71 /* Assets.xcassets */; };
 		A0A219162886466B0096AE71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A219152886466B0096AE71 /* Preview Assets.xcassets */; };
 		A0A219202886466B0096AE71 /* swiftui_mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2191F2886466B0096AE71 /* swiftui_mvvmTests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		A0A2190B288646690096AE71 /* swiftui-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmApp.swift; sourceTree = "<group>"; };
-		A0A21910288646690096AE71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A0A21910288646690096AE71 /* Minimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minimal.swift; sourceTree = "<group>"; };
 		A0A219122886466B0096AE71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0A219152886466B0096AE71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0A2191B2886466B0096AE71 /* swiftui-mvvmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-mvvmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +94,8 @@
 		A0A2190D288646690096AE71 /* swiftui-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				A0A219382886567A0096AE71 /* Recipes */,
 				A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */,
-				A0A21910288646690096AE71 /* ContentView.swift */,
 				A0A219122886466B0096AE71 /* Assets.xcassets */,
 				A0A219142886466B0096AE71 /* Preview Content */,
 			);
@@ -125,6 +125,14 @@
 				A0A2192B2886466B0096AE71 /* swiftui_mvvmUITestsLaunchTests.swift */,
 			);
 			path = "swiftui-mvvmUITests";
+			sourceTree = "<group>";
+		};
+		A0A219382886567A0096AE71 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				A0A21910288646690096AE71 /* Minimal.swift */,
+			);
+			path = Recipes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A21911288646690096AE71 /* ContentView.swift in Sources */,
+				A0A21911288646690096AE71 /* Minimal.swift in Sources */,
 				A0A2190F288646690096AE71 /* swiftui_mvvmApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
