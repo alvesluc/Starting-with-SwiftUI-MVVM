@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0749A162890BDA700A78358 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0749A152890BDA700A78358 /* BindingExtensions.swift */; };
 		A0A2190F288646690096AE71 /* swiftui_mvvmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */; };
 		A0A21911288646690096AE71 /* Minimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A21910288646690096AE71 /* Minimal.swift */; };
 		A0A219132886466B0096AE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A219122886466B0096AE71 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0749A152890BDA700A78358 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		A0A2190B288646690096AE71 /* swiftui-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmApp.swift; sourceTree = "<group>"; };
 		A0A21910288646690096AE71 /* Minimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minimal.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0749A142890BD9000A78358 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0749A152890BDA700A78358 /* BindingExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A0A21902288646690096AE71 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 		A0A2190D288646690096AE71 /* swiftui-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				A0749A142890BD9000A78358 /* Extensions */,
 				A0A219382886567A0096AE71 /* Recipes */,
 				A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */,
 				A0A219122886466B0096AE71 /* Assets.xcassets */,
@@ -269,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A2193A2886572A0096AE71 /* Login.swift in Sources */,
+				A0749A162890BDA700A78358 /* BindingExtensions.swift in Sources */,
 				A0A21911288646690096AE71 /* Minimal.swift in Sources */,
 				A0A2190F288646690096AE71 /* swiftui_mvvmApp.swift in Sources */,
 			);
