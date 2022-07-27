@@ -6,7 +6,8 @@
 //  Following Cícero Camargo video tutorials:
 //  002 SwiftUI + MVVM: Bindings - Parte 1
 //  003 SwiftUI + MVVM: Bindings - Parte 2
-//
+//  005 SwiftUI + MVVM: Bindings - Testes unitários do ViewModel - Parte 1
+//  006 SwiftUI + MVVM: Bindings - Testes unitários do ViewModel - Parte 2
 
 import SwiftUI
 
@@ -55,7 +56,7 @@ struct LoginView: View {
     
 }
 
-struct LoginViewState {
+struct LoginViewState: Equatable {
     var email = ""
     var password = ""
     var isLoggingIn = false
@@ -64,12 +65,33 @@ struct LoginViewState {
 
 // Extension only to detach computed variables from stored variables
 extension LoginViewState {
-    var canSubmit: Bool { !email.isEmpty && !password.isEmpty}
-    var footerMessage: String { isLoggingIn ? "Loggin in..." : "" }
+    static let isLogginInFooter = "Loggin in..."
+    var canSubmit: Bool { !email.isEmpty && !password.isEmpty && !isLoggingIn}
+    // Self with uppercase "S", refers to the type itself, which means that
+    // LoginViewState.isLogginInFooter and Self.isLogginInFooter are the same
+    var footerMessage: String { isLoggingIn ? Self.isLogginInFooter : "" }
+}
+
+protocol LoginService {
+    func login(
+        email: String,
+        password: String,
+        completion: @escaping (Error?) -> Void
+    )
+}
+
+struct EmptyLoginService: LoginService {
+    func login(
+        email: String,
+        password: String,
+        completion: @escaping (Error?) -> Void
+    ) {}
 }
 
 final class LoginViewModel: ObservableObject {
     @Published private(set) var state: LoginViewState
+    private let service: LoginService
+    private let loginDidSucceed: () -> Void
     
     var bindings: (
         email: Binding<String>,
@@ -86,15 +108,28 @@ final class LoginViewModel: ObservableObject {
         )
     }
     
-    init(initialState: LoginViewState) {
+    init(
+        initialState: LoginViewState,
+        service: LoginService,
+        loginDidSucceed: @escaping () -> Void
+    ) {
+        self.service = service
+        self.loginDidSucceed = loginDidSucceed
         state = initialState
     }
     
     func login() {
         state.isLoggingIn = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-            self.state.isLoggingIn = false
-            self.state.isShowingErrorAlert = true
+        service.login(
+            email: state.email,
+            password: state.password
+        ) { [weak self] error in
+            if error == nil {
+                self?.loginDidSucceed()
+            } else {
+                self?.state.isLoggingIn = false
+                self?.state.isShowingErrorAlert = true
+            }
         }
     }
 }
@@ -102,7 +137,13 @@ final class LoginViewModel: ObservableObject {
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LoginView(model: .init(initialState: .init()))
+            LoginView(
+                model: .init(
+                    initialState: .init(),
+                    service: EmptyLoginService(),
+                    loginDidSucceed: {}
+                )
+            )
         }
     }
 }

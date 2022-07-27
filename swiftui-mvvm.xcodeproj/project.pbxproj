@@ -12,10 +12,10 @@
 		A0A21911288646690096AE71 /* Minimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A21910288646690096AE71 /* Minimal.swift */; };
 		A0A219132886466B0096AE71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A219122886466B0096AE71 /* Assets.xcassets */; };
 		A0A219162886466B0096AE71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A219152886466B0096AE71 /* Preview Assets.xcassets */; };
-		A0A219202886466B0096AE71 /* swiftui_mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2191F2886466B0096AE71 /* swiftui_mvvmTests.swift */; };
 		A0A2192A2886466B0096AE71 /* swiftui_mvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A219292886466B0096AE71 /* swiftui_mvvmUITests.swift */; };
 		A0A2192C2886466B0096AE71 /* swiftui_mvvmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2192B2886466B0096AE71 /* swiftui_mvvmUITestsLaunchTests.swift */; };
 		A0A2193A2886572A0096AE71 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A219392886572A0096AE71 /* Login.swift */; };
+		A0B20EC12890DBA20033493B /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B20EC02890DBA20033493B /* LoginTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +43,11 @@
 		A0A219122886466B0096AE71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0A219152886466B0096AE71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0A2191B2886466B0096AE71 /* swiftui-mvvmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-mvvmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0A2191F2886466B0096AE71 /* swiftui_mvvmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmTests.swift; sourceTree = "<group>"; };
 		A0A219252886466B0096AE71 /* swiftui-mvvmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-mvvmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A219292886466B0096AE71 /* swiftui_mvvmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITests.swift; sourceTree = "<group>"; };
 		A0A2192B2886466B0096AE71 /* swiftui_mvvmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A0A219392886572A0096AE71 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		A0B20EC02890DBA20033493B /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 		A0A2191E2886466B0096AE71 /* swiftui-mvvmTests */ = {
 			isa = PBXGroup;
 			children = (
-				A0A2191F2886466B0096AE71 /* swiftui_mvvmTests.swift */,
+				A0B20EC02890DBA20033493B /* LoginTests.swift */,
 			);
 			path = "swiftui-mvvmTests";
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A219202886466B0096AE71 /* swiftui_mvvmTests.swift in Sources */,
+				A0B20EC12890DBA20033493B /* LoginTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
