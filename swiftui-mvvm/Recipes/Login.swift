@@ -1,14 +1,3 @@
-//
-//  Login.swift
-//  swiftui-mvvm
-//
-//  Created by Lucas Alves on 19/07/22.
-//  Following Cícero Camargo video tutorials:
-//  002 SwiftUI + MVVM: Bindings - Parte 1
-//  003 SwiftUI + MVVM: Bindings - Parte 2
-//  005 SwiftUI + MVVM: Bindings - Testes unitários do ViewModel - Parte 1
-//  006 SwiftUI + MVVM: Bindings - Testes unitários do ViewModel - Parte 2
-
 import SwiftUI
 
 struct LoginView: View {

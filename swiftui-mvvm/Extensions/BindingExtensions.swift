@@ -1,10 +1,3 @@
-//
-//  BindingExtensions.swift
-//  swiftui-mvvm
-//
-//  Created by Lucas Alves on 26/07/22.
-//
-
 import Foundation
 import SwiftUI
 

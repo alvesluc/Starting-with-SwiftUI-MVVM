@@ -1,10 +1,3 @@
-//
-//  LoginTests.swift
-//  swiftui-mvvmTests
-//
-//  Created by Lucas Alves on 26/07/22.
-//
-
 // Annotation to make private classes internals accessible
 @testable import swiftui_mvvm
 import XCTest
