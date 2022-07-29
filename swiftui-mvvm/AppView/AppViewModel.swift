@@ -6,13 +6,17 @@ final class AppViewModel: ObservableObject {
     private var userCancellable: AnyCancellable?
     
     init(sessionService: SessionService) {
-        userCancellable = sessionService.userPublisher.sink { [weak self] user in
-            self?.state = user == nil ?
-                .login(LoginViewModel(
-                initialState: .init(),
-                service: sessionService,
-                loginDidSucceed: {})
-            ) : .loggedArea(sessionService)
+        userCancellable = sessionService.userPublisher
+            // If an User is returned, the map returns true, else, false
+            .map { $0 != nil }
+            // If it returns true, and it was already true, the removeDuplicates
+            // don't let the sink notify the listeners, guaranteeing that the UI
+            // isn't rebuilt
+            .removeDuplicates()
+            .sink { [weak self] isLoggedIn in
+                self?.state = isLoggedIn
+                    ? .loggedArea(sessionService)
+                    : .login(LoginViewModel(service: sessionService))
         }
     }
 }

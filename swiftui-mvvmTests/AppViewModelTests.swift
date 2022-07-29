@@ -2,7 +2,6 @@
 import Combine
 import XCTest
 
-
 class AppViewModelTests: XCTestCase {
     func test_whenUserIsLoggedIn_showsLoggedArea() throws {
         // sut = subject under test
@@ -32,11 +31,34 @@ class AppViewModelTests: XCTestCase {
         
         XCTAssert(sut.state?.isLogin == true)
     }
+    
+    func test_whenUserIsLoggedInAndUserInfoChanges_stateIsNotUpdated() {
+        let (sut, service) = makeSUT(isLoggedIn: true)
+        
+        var sinkCount = 0
+        var cancellable: AnyCancellable? = sut.$state.sink { _ in
+            sinkCount += 1
+        }
+        
+        service.user?.name = "Luk"
+        
+        // sinkCount needs to be 1, as when it starts it is called once, and
+        // only increases if it's called again, which should only occur if the
+        // value that was emitted is different from the previous value
+        XCTAssertEqual(sinkCount, 1)
+        
+        cancellable = nil
+    }
 }
+
 // MARK: - Helpers
 private extension AppViewModelTests {
     func makeSUT(isLoggedIn: Bool) -> (AppViewModel, FakeSessionService) {
-        let sessionService = FakeSessionService(user: isLoggedIn ? .init() : nil)
+        let sessionService = FakeSessionService(
+            user: isLoggedIn
+            ? .init(email: "lucas@mail.com", name: "Lucas")
+            : nil
+        )
         return (AppViewModel(sessionService: sessionService), sessionService)
     }
 }

@@ -20,8 +20,7 @@ struct swiftui_mvvmApp: App {
                 LoginView(
                     model: .init(
                         initialState: .init(),
-                        service: FailWithDelayLoginService(),
-                        loginDidSucceed: {}
+                        service: FailWithDelayLoginService()
                     )
                 )
             }

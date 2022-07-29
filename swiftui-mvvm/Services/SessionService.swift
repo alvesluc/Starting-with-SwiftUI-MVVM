@@ -12,7 +12,10 @@ class FakeSessionService: SessionService {
     // Can be done in both ways:
     // var userPublisher: AnyPublisher<User?, Never> { userSubject.eraseToAnyPublisher() }
     private(set) lazy var userPublisher = userSubject.eraseToAnyPublisher()
-    var user: User? { userSubject.value }
+    var user: User? {
+        get { userSubject.value }
+        set { userSubject.send(newValue) }
+    }
     
     init(user: User?) {
         self.userSubject = .init(user)
@@ -22,7 +25,7 @@ class FakeSessionService: SessionService {
         email: String,
         password: String,
         completion: @escaping (Error?) -> Void) {
-            userSubject.send(.init())
+            userSubject.send(.init(email: email, name: "Lucas"))
     }
     
     func logout() {
