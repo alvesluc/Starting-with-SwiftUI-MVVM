@@ -12,6 +12,10 @@
 		A04057DA28935AEF004DCE7C /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057D928935AEF004DCE7C /* AppViewModel.swift */; };
 		A04057DC28935B2C004DCE7C /* AppViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057DB28935B2C004DCE7C /* AppViewState.swift */; };
 		A04057DE28935B55004DCE7C /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057DD28935B55004DCE7C /* AppView.swift */; };
+		A04057E328949B93004DCE7C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057E228949B93004DCE7C /* LoginView.swift */; };
+		A04057E528949BDE004DCE7C /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057E428949BDE004DCE7C /* LoginViewState.swift */; };
+		A04057E728949C42004DCE7C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057E628949C42004DCE7C /* LoginService.swift */; };
+		A04057E928949C61004DCE7C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057E828949C61004DCE7C /* LoginViewModel.swift */; };
 		A0749A162890BDA700A78358 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0749A152890BDA700A78358 /* BindingExtensions.swift */; };
 		A0A2190F288646690096AE71 /* swiftui_mvvmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */; };
 		A0A21911288646690096AE71 /* Minimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A21910288646690096AE71 /* Minimal.swift */; };
@@ -19,7 +23,6 @@
 		A0A219162886466B0096AE71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A219152886466B0096AE71 /* Preview Assets.xcassets */; };
 		A0A2192A2886466B0096AE71 /* swiftui_mvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A219292886466B0096AE71 /* swiftui_mvvmUITests.swift */; };
 		A0A2192C2886466B0096AE71 /* swiftui_mvvmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2192B2886466B0096AE71 /* swiftui_mvvmUITestsLaunchTests.swift */; };
-		A0A2193A2886572A0096AE71 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A219392886572A0096AE71 /* Login.swift */; };
 		A0B20EC12890DBA20033493B /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B20EC02890DBA20033493B /* LoginTests.swift */; };
 		A0B20EC3289348B80033493B /* AppViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B20EC2289348B80033493B /* AppViewModelTests.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +50,10 @@
 		A04057D928935AEF004DCE7C /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		A04057DB28935B2C004DCE7C /* AppViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewState.swift; sourceTree = "<group>"; };
 		A04057DD28935B55004DCE7C /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		A04057E228949B93004DCE7C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A04057E428949BDE004DCE7C /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
+		A04057E628949C42004DCE7C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		A04057E828949C61004DCE7C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A0749A152890BDA700A78358 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		A0A2190B288646690096AE71 /* swiftui-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmApp.swift; sourceTree = "<group>"; };
@@ -57,7 +64,6 @@
 		A0A219252886466B0096AE71 /* swiftui-mvvmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-mvvmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A219292886466B0096AE71 /* swiftui_mvvmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITests.swift; sourceTree = "<group>"; };
 		A0A2192B2886466B0096AE71 /* swiftui_mvvmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A0A219392886572A0096AE71 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A0B20EC02890DBA20033493B /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		A0B20EC2289348B80033493B /* AppViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,16 +93,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A04057D128935A64004DCE7C /* AppView */ = {
-			isa = PBXGroup;
-			children = (
-				A04057D928935AEF004DCE7C /* AppViewModel.swift */,
-				A04057DB28935B2C004DCE7C /* AppViewState.swift */,
-				A04057DD28935B55004DCE7C /* AppView.swift */,
-			);
-			path = AppView;
-			sourceTree = "<group>";
-		};
 		A04057D228935A70004DCE7C /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +107,36 @@
 				A04057D728935AC9004DCE7C /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A04057DF28949B60004DCE7C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A04057E128949B6D004DCE7C /* Login */,
+				A04057E028949B67004DCE7C /* App */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A04057E028949B67004DCE7C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A04057D928935AEF004DCE7C /* AppViewModel.swift */,
+				A04057DB28935B2C004DCE7C /* AppViewState.swift */,
+				A04057DD28935B55004DCE7C /* AppView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A04057E128949B6D004DCE7C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A04057E228949B93004DCE7C /* LoginView.swift */,
+				A04057E428949BDE004DCE7C /* LoginViewState.swift */,
+				A04057E628949C42004DCE7C /* LoginService.swift */,
+				A04057E828949C61004DCE7C /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		A0749A142890BD9000A78358 /* Extensions */ = {
@@ -144,9 +170,9 @@
 		A0A2190D288646690096AE71 /* swiftui-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				A04057DF28949B60004DCE7C /* Scenes */,
 				A04057D628935AC0004DCE7C /* Models */,
 				A04057D228935A70004DCE7C /* Services */,
-				A04057D128935A64004DCE7C /* AppView */,
 				A0749A142890BD9000A78358 /* Extensions */,
 				A0A219382886567A0096AE71 /* Recipes */,
 				A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */,
@@ -186,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				A0A21910288646690096AE71 /* Minimal.swift */,
-				A0A219392886572A0096AE71 /* Login.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -321,14 +346,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A2193A2886572A0096AE71 /* Login.swift in Sources */,
 				A04057D528935A8F004DCE7C /* SessionService.swift in Sources */,
 				A04057DE28935B55004DCE7C /* AppView.swift in Sources */,
 				A04057DC28935B2C004DCE7C /* AppViewState.swift in Sources */,
 				A04057DA28935AEF004DCE7C /* AppViewModel.swift in Sources */,
 				A04057D828935AC9004DCE7C /* User.swift in Sources */,
 				A0749A162890BDA700A78358 /* BindingExtensions.swift in Sources */,
+				A04057E728949C42004DCE7C /* LoginService.swift in Sources */,
+				A04057E928949C61004DCE7C /* LoginViewModel.swift in Sources */,
+				A04057E528949BDE004DCE7C /* LoginViewState.swift in Sources */,
 				A0A21911288646690096AE71 /* Minimal.swift in Sources */,
+				A04057E328949B93004DCE7C /* LoginView.swift in Sources */,
 				A0A2190F288646690096AE71 /* swiftui_mvvmApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
