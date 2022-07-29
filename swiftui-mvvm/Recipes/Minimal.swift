@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  swiftui-mvvm
-//
-//  Created by Lucas Alves on 18/07/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {

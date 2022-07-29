@@ -4,13 +4,28 @@ struct AppView: View {
     @ObservedObject var viewModel: AppViewModel
     
     var body: some View {
+        switchView()
+    }
+    
+    @ViewBuilder
+    func switchView() -> some View {
         switch viewModel.state {
-        case .login:
-            return EmptyView()
-        case .loggedArea:
-            return EmptyView()
+        case let .login(ViewModel):
+            NavigationView {
+                LoginView(model: ViewModel)
+            }
+        case let .loggedArea(sessionService):
+            VStack {
+                Text("Welcome user!")
+                Button(
+                    action: sessionService.logout,
+                    label: {
+                        Text("Log out")
+                    }
+                )
+            }
         case .none:
-            return EmptyView()
+            EmptyView()
         }
     }
 }
