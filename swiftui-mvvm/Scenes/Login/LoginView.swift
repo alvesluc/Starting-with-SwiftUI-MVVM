@@ -17,6 +17,11 @@ struct LoginView: View {
                     .autocapitalization(.none)
                 SecureField("Password", text: model.bindings.password)
             }
+            Section(header: Text("Don't have an account?")) {
+                Button(action: model.showSignUpFlow) {
+                    Text("Register")
+                }
+            }
         }
         .navigationBarItems(trailing: submitButton)
         .navigationBarTitle("Identify youself")
@@ -26,6 +31,11 @@ struct LoginView: View {
                 title: Text("Oops! Login failed."),
                 message: Text("Please verify your e-mail and password.")
             )
+        }
+        .sheet(item: model.bindings.signUpViewModel) { viewModel in
+            NavigationView {
+                SignUpView(viewModel: viewModel)
+            }
         }
     }
     

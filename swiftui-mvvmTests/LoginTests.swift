@@ -27,7 +27,7 @@ class LoginTests: XCTestCase {
     }
     
     func testSuccessfulLoginFlow() {
-        viewModel.bindings.email.wrappedValue = "alvesluc@dev.com"
+        viewModel.bindings.email.wrappedValue = "lucas@mail.com"
         viewModel.bindings.password.wrappedValue = "123"
         XCTAssert(viewModel.state.canSubmit)
         XCTAssert(viewModel.state.footerMessage.isEmpty)
@@ -36,7 +36,7 @@ class LoginTests: XCTestCase {
         XCTAssertEqual(
             viewModel.state,
             LoginViewState(
-                email: "alvesluc@dev.com",
+                email: "lucas@mail.com",
                 password: "123",
                 isLoggingIn: true,
                 isShowingErrorAlert: false
@@ -47,12 +47,12 @@ class LoginTests: XCTestCase {
             viewModel.state.footerMessage,
             LoginViewState.isLogginInFooter
         )
-        XCTAssertEqual(service.lastReceivedEmail, "alvesluc@dev.com")
+        XCTAssertEqual(service.lastReceivedEmail, "lucas@mail.com")
         XCTAssertEqual(service.lastReceivedPassword, "123")
     }
     
     func testUnsuccessfulLoginFlow() {
-        viewModel.bindings.email.wrappedValue = "alvesluc@dev.com"
+        viewModel.bindings.email.wrappedValue = "lucas@mail.com"
         viewModel.bindings.password.wrappedValue = "123"
         XCTAssert(viewModel.state.canSubmit)
         XCTAssert(viewModel.state.footerMessage.isEmpty)
@@ -61,7 +61,7 @@ class LoginTests: XCTestCase {
         XCTAssertEqual(
             viewModel.state,
             LoginViewState(
-                email: "alvesluc@dev.com",
+                email: "lucas@mail.com",
                 password: "123",
                 isLoggingIn: true,
                 isShowingErrorAlert: false
@@ -72,7 +72,7 @@ class LoginTests: XCTestCase {
             viewModel.state.footerMessage,
             LoginViewState.isLogginInFooter
         )
-        XCTAssertEqual(service.lastReceivedEmail, "alvesluc@dev.com")
+        XCTAssertEqual(service.lastReceivedEmail, "lucas@mail.com")
         XCTAssertEqual(service.lastReceivedPassword, "123")
         
         struct FakeError: Error{}
@@ -80,7 +80,7 @@ class LoginTests: XCTestCase {
         XCTAssertEqual(
             viewModel.state,
             LoginViewState(
-                email: "alvesluc@dev.com",
+                email: "lucas@mail.com",
                 password: "123",
                 isLoggingIn: false,
                 isShowingErrorAlert: true
@@ -88,6 +88,24 @@ class LoginTests: XCTestCase {
         )
         XCTAssert(viewModel.state.canSubmit)
         XCTAssert(viewModel.state.footerMessage.isEmpty)
+    }
+    
+    func test_showSignUpFlow_createsSignUpViewModel() {
+        viewModel.showSignUpFlow()
+        XCTAssertNotNil(viewModel.state.signUpViewModel)
+    }
+    
+    func test_signUpBinding_readsValueFromState() {
+        viewModel.showSignUpFlow()
+        XCTAssertNotNil(viewModel.bindings.signUpViewModel.wrappedValue)
+    }
+    
+    func test_signUpBinding_writesValueToState() {
+        viewModel.showSignUpFlow()
+        
+        viewModel.bindings.signUpViewModel.wrappedValue = nil
+        
+        XCTAssertNil(viewModel.state.signUpViewModel)
     }
 }
 

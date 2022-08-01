@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A03FDD44289748EE00FAA5E8 /* SignUpState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03FDD43289748EE00FAA5E8 /* SignUpState.swift */; };
+		A03FDD46289749A300FAA5E8 /* SignUpStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03FDD45289749A300FAA5E8 /* SignUpStateTests.swift */; };
+		A03FDD482897517C00FAA5E8 /* SignUpViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03FDD472897517C00FAA5E8 /* SignUpViewModelTests.swift */; };
 		A04057D528935A8F004DCE7C /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057D428935A8F004DCE7C /* SessionService.swift */; };
 		A04057D828935AC9004DCE7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057D728935AC9004DCE7C /* User.swift */; };
 		A04057DA28935AEF004DCE7C /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057D928935AEF004DCE7C /* AppViewModel.swift */; };
@@ -16,6 +19,8 @@
 		A04057E528949BDE004DCE7C /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057E428949BDE004DCE7C /* LoginViewState.swift */; };
 		A04057E728949C42004DCE7C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057E628949C42004DCE7C /* LoginService.swift */; };
 		A04057E928949C61004DCE7C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057E828949C61004DCE7C /* LoginViewModel.swift */; };
+		A04057EC28949F46004DCE7C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057EB28949F46004DCE7C /* SignUpView.swift */; };
+		A04057EE28949F5F004DCE7C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04057ED28949F5F004DCE7C /* SignUpViewModel.swift */; };
 		A0749A162890BDA700A78358 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0749A152890BDA700A78358 /* BindingExtensions.swift */; };
 		A0A2190F288646690096AE71 /* swiftui_mvvmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */; };
 		A0A21911288646690096AE71 /* Minimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A21910288646690096AE71 /* Minimal.swift */; };
@@ -45,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A03FDD43289748EE00FAA5E8 /* SignUpState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpState.swift; sourceTree = "<group>"; };
+		A03FDD45289749A300FAA5E8 /* SignUpStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStateTests.swift; sourceTree = "<group>"; };
+		A03FDD472897517C00FAA5E8 /* SignUpViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelTests.swift; sourceTree = "<group>"; };
 		A04057D428935A8F004DCE7C /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		A04057D728935AC9004DCE7C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A04057D928935AEF004DCE7C /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
@@ -54,6 +62,8 @@
 		A04057E428949BDE004DCE7C /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 		A04057E628949C42004DCE7C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		A04057E828949C61004DCE7C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A04057EB28949F46004DCE7C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A04057ED28949F5F004DCE7C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		A0749A152890BDA700A78358 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		A0A2190B288646690096AE71 /* swiftui-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0A2190E288646690096AE71 /* swiftui_mvvmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmApp.swift; sourceTree = "<group>"; };
@@ -93,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A03FDD492897518400FAA5E8 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A03FDD45289749A300FAA5E8 /* SignUpStateTests.swift */,
+				A03FDD472897517C00FAA5E8 /* SignUpViewModelTests.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		A04057D228935A70004DCE7C /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +131,7 @@
 		A04057DF28949B60004DCE7C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A04057EA28949F3A004DCE7C /* SignUp */,
 				A04057E128949B6D004DCE7C /* Login */,
 				A04057E028949B67004DCE7C /* App */,
 			);
@@ -137,6 +157,16 @@
 				A04057E828949C61004DCE7C /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		A04057EA28949F3A004DCE7C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A04057EB28949F46004DCE7C /* SignUpView.swift */,
+				A04057ED28949F5F004DCE7C /* SignUpViewModel.swift */,
+				A03FDD43289748EE00FAA5E8 /* SignUpState.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		A0749A142890BD9000A78358 /* Extensions */ = {
@@ -195,6 +225,7 @@
 			children = (
 				A0B20EC02890DBA20033493B /* LoginTests.swift */,
 				A0B20EC2289348B80033493B /* AppViewModelTests.swift */,
+				A03FDD492897518400FAA5E8 /* SignUp */,
 			);
 			path = "swiftui-mvvmTests";
 			sourceTree = "<group>";
@@ -352,8 +383,11 @@
 				A04057DA28935AEF004DCE7C /* AppViewModel.swift in Sources */,
 				A04057D828935AC9004DCE7C /* User.swift in Sources */,
 				A0749A162890BDA700A78358 /* BindingExtensions.swift in Sources */,
+				A04057EE28949F5F004DCE7C /* SignUpViewModel.swift in Sources */,
+				A03FDD44289748EE00FAA5E8 /* SignUpState.swift in Sources */,
 				A04057E728949C42004DCE7C /* LoginService.swift in Sources */,
 				A04057E928949C61004DCE7C /* LoginViewModel.swift in Sources */,
+				A04057EC28949F46004DCE7C /* SignUpView.swift in Sources */,
 				A04057E528949BDE004DCE7C /* LoginViewState.swift in Sources */,
 				A0A21911288646690096AE71 /* Minimal.swift in Sources */,
 				A04057E328949B93004DCE7C /* LoginView.swift in Sources */,
@@ -367,6 +401,8 @@
 			files = (
 				A0B20EC3289348B80033493B /* AppViewModelTests.swift in Sources */,
 				A0B20EC12890DBA20033493B /* LoginTests.swift in Sources */,
+				A03FDD482897517C00FAA5E8 /* SignUpViewModelTests.swift in Sources */,
+				A03FDD46289749A300FAA5E8 /* SignUpStateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
