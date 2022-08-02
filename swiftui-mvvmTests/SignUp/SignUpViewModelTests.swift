@@ -47,6 +47,6 @@ final class SignUpViewModelTests: XCTestCase {
 
 private extension SignUpViewModelTests {
     func makeSUT(state: SignUpState) -> SignUpViewModel {
-        .init(initialState: state)
+        .init(initialState: state, flowCompleted: {})
     }
 }
